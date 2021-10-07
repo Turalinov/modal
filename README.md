@@ -1,2 +1,2 @@
 # modal
-test project
+modal window functionality
