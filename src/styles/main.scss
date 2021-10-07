@@ -1,0 +1,10 @@
+$white: #ffffff;
+$black: #3D464D;
+$blue: #11A0F8;
+$blue-dark: #1898e6;
+
+@import "./layout/fonts.scss";
+@import "./layout/mixins.scss";
+@import "./layout/base.scss";
+
+@import "./blocks/*.scss";

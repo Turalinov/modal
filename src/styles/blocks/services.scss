@@ -1,0 +1,11 @@
+.services {
+  height: 100vh;
+  background: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    color: $blue;
+  }
+}

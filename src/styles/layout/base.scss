@@ -1,0 +1,108 @@
+:root {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include roboto;
+  color: $black;
+}
+
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul>li {
+  list-style: none;
+}
+
+button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  @include roboto(medium);
+  color: $blue;
+  padding: 8px 14px;
+  text-transform: uppercase;
+  border: 1px solid $blue;
+  border-radius: 2px;
+
+  @include tablets {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+  
+  &:hover {
+    color: $blue-dark;
+    border-color: $blue-dark;
+  }
+
+  &--bordered-none {
+    border: none;
+  }
+}
+
+
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+}
+
+
+p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper__content {
+  flex: 1;
+}
+
+.container {
+  width: 95%;
+  max-width: 1430px;
+  margin: 0 auto;
+}

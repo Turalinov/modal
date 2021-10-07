@@ -1,0 +1,109 @@
+.modal {
+  background: rgba(61, 70, 77, 0.7);
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+
+  &__content {
+    max-width: 300px;
+    background-color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(218, 227, 234, 0.3);
+    padding: 30px 20px;
+    border-bottom: 1px solid #DAE3EA;
+
+    @include tablets {
+      padding: 15px;
+    }
+  }
+
+  &__title {
+    @include roboto(medium);
+    text-transform: uppercase;
+
+    @include tablets {
+      font-size: 12px;
+    }
+  }
+
+  &__close {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 20px;
+    border-bottom: 1px solid #DAE3EA;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+      padding: 15px;
+    }
+  }
+
+  &__icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+
+    @include tablets {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+
+    @include tablets {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
+  &__question {
+    color: #2F363C;
+    margin-bottom: 10px;
+  }
+
+  &__desc {
+    color: #7E939E;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+
+    @include tablets {
+      padding: 15px;
+    }
+
+    &> button + button {
+      margin-left: 5px;
+    }
+  }
+
+  &.show {
+    display: block;
+  }
+
+}
